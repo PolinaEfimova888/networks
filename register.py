@@ -7,7 +7,7 @@ array = []
 register_file = open('register.txt')
 lines = register_file.readlines()
 
-for i in range(1, len(lines)):
+for i in range(1, len(lines)):#1
     b = lines[i].strip().split(';')
     array.extend(b)
  
@@ -17,7 +17,7 @@ if url in array:
 else:
     print("URL insn't bloked")
  
-parse = urlparse(url)
+parse = urlparse(url)#2
 domain = parse.netloc.split(".")[1:]
 server = ".".join(domain)
 print("DOMAIN:",server)
