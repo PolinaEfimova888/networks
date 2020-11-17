@@ -8,7 +8,7 @@ import json
 import requests
 import pandas as pd
 
-data = pd.read_csv('list')
+data = pd.read_csv('list')  //слишком большой файл для выгрузки в forlabs/git
 from urllib.parse import urlparse
 
 urls, domains = [], []
@@ -24,7 +24,7 @@ def get_json(domain):
     json_data = bytes_data.decode('utf8')
     data = json.loads(json_data)
     return data
-def get_answ(domains):
+def get_answ(domains):  //создаем файлик с доменами
     answ = []
     answer = open('answer.txt', 'w')
     for domain in domains:
