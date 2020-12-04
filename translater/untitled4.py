@@ -34,10 +34,8 @@ def translate(string, lg):
     request = requests.post(url, headers=headers, json=json)
     values = extract(request.json(), [], 'text')
     return ''.join(values)
-
-
-file = open("text.txt", "r", encoding="utf-8")
 lg = input('Your language: ')
+file = open("text.txt", "r", encoding="utf-8")
 output = open("translate_text.txt", "a+")
 
 for line in file.readlines(): 
